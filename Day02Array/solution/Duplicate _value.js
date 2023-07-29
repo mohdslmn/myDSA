@@ -41,4 +41,5 @@ const nums = [1,2,3,4,4];
 const res = findDuplicate(nums);
 console.log(res); 
 
-//explanation :
+// time complexity : O(n)
+// space complexity : 0(1)
