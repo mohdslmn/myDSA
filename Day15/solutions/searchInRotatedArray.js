@@ -1,6 +1,5 @@
 var binarySearch = function (arr, elem,start,end) {
     
-    //const mid = start + Math.floor((end - start) / 2);
     while (start <= end) {
       const mid = Math.floor((start + end) / 2);
       const guess = arr[mid];
