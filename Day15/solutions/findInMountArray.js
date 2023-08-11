@@ -1,9 +1,30 @@
-
-var orderNotKnown = function(arr,target){
-
-function binarySearchAscending() {
+var findInMountainArray = function(target, mountainArr) {
+    let peak = peakIndexInMountainArray(mountainArr);
+    let firstTry = orderNotKnown(mountainArr,target,0,peak);
+    if(firstTry !== -1){
+        return firstTry;
+    }
+    return orderNotKnown(mountainArr,target,peak + 1, mountainArr.length - 1);
+};
+var peakIndexInMountainArray = function(arr) {
     let left = 0;
     let right = arr.length - 1;
+
+    while (left < right) {
+        let mid = Math.floor((left + right) / 2);
+
+        if (arr[mid] < arr[mid + 1]) {
+            left = mid + 1;
+        } else {
+            right = mid;
+        }
+    }
+
+    return left;    
+};
+var orderNotKnown = function(arr,target,left,right){
+
+function binarySearchAscending() {
   
     while (left <= right) {
       const mid = Math.floor((left + right) / 2);
@@ -22,9 +43,7 @@ function binarySearchAscending() {
 
 
   function binarySearchDescending() {
-    let left = 0;
-    let right = arr.length - 1;
-  
+    
     while (left <= right) {
       const mid = Math.floor((left + right) / 2);
   
@@ -40,7 +59,7 @@ function binarySearchAscending() {
     return -1; // Element not found
   }
 
-  if (arr[0] < arr[1]) {
+  if (arr[0] < arr[arr.length - 1]) {
     // Array is sorted in ascending order
     return binarySearchAscending(arr, target);
   } else {
@@ -50,8 +69,6 @@ function binarySearchAscending() {
   
 
 };
-
- 
-const arr = [5,4,3,2,1];
-const elem = 4;
-console.log(orderNotKnown(arr, elem));
+const arr = [5,6,7,8,4,3,2,1];
+const target = 3;
+console.log(findInMountainArray(target,arr));
