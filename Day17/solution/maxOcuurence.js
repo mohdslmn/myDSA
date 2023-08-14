@@ -1,23 +1,22 @@
- var maxOccurence = function(str){
+var maxOccurence = function (str) {
+    //if str is is empty 
+  if (str === "") {
+    return "";
+  }
+  let map = new Map();
+  let max = 0;
+  let ans = 0;
 
-    if(str === ""){
-        return "";
+  for (let i = 0; i < str.length; i++) {
+    //in map store each char of str as key and count of element as value 
+    map.set(str[i], (map.get(str[i]) || 0) + 1);
+    //for maxOccurence char assign it into ans. max will contain value
+    if (max < map.get(str[i])) {
+      ans = str[i];
+      max = map.get(str[i]);
     }
-let map = new Map();
-let max = 0 ;
-let ans;
- str.split("").forEach(element => {
-    map[element] = map[element] ? map[element] + 1 : 1 ;
-    //console.log(map);
- 
-    max = max < map[element] ?  max = map[element] : max ;
-  
- });
+  }
 
- return max;
-
-
-
-
- };
- console.log(maxOccurence("geeksforgeeks"));//4
+  return ans;
+};
+console.log(maxOccurence("gfggfgeeeee"));

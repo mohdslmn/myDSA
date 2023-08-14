@@ -7,11 +7,11 @@ var checkAnagram = function (str1, str2) {
   let frequecyCount = {};
 
   for (let s = 0; s < str1.length; s++) {
-    // frequecyCount1[s] = frequecyCount1[s];
-    // console.log(frequecyCount1)printing undefine for each characters so assign 0
+    // frequecyCount[s] = frequecyCount[s];
+    // console.log(frequecyCount)print undefine for each characters bydefault JS behvr so assign 0
 
     if (!frequecyCount[str1[s]]) {
-      // if character doesnot exist , assign 0 in it bcoz in JS letters of string will be undefined so assigning 0 in it
+      // if character doesnot exist , assign 0 in it .
     
       frequecyCount[str1[s]] = 0;
     }
