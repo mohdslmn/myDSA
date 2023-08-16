@@ -1,7 +1,7 @@
-function isVowel(vowel_set,str){
+function isVowel(vowel_set,temp_str){
     for(let ch of vowel_set){
-        //checking vowel_set char belongs to str or not 
-        const check = str.includes(ch);
+        //checking temp_str char belongs to  vowel_set or not 
+        const check = temp_str.includes(ch);
         if(check === false) return false;
 
     }
@@ -24,7 +24,7 @@ var countVowelSubstrings = function(word) {
            //if vowel assign into temp
            temp_str += curr;
 
-           //CHECK IF TEMP STRING LENGTH IS >= 5 and this current temp string belongs to str
+           //CHECK IF TEMP STRING LENGTH IS >= 5 and this current temp string is vowel or not
            if(temp_str.length >= 5 && isVowel(vowel, temp_str)){
                result++;
            }
@@ -34,7 +34,7 @@ var countVowelSubstrings = function(word) {
        else{
            left++;
            temp_str = "";
-           //update right coz breaks th chain
+           //update right coz breaks the chain
            right = left ;
 
        }

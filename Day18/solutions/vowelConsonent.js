@@ -1,4 +1,4 @@
-var countVowelConsonent = function (str) {
+var countVowelConsonent = function(str) {
   let vowel = (consonent = 0);
 
   for (let c = 0; c < str.length; c++) {
