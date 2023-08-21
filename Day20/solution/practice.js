@@ -64,7 +64,7 @@ const allSubstrings = findAllSubstrings(inputString);
 console.log("All Substrings:");
 console.log(allSubstrings);
 
-*/
+
 var longestPalindromeSubstring = function (str) {
   let res = "";
   const isPalindrome = (substr) => {
@@ -103,3 +103,77 @@ var longestPalindromeSubstring = function (str) {
 };
 
 console.log(longestPalindromeSubstring("babad"));
+
+
+
+
+const s = "codeleet" , indices = [4,5,6,7,0,2,1,3];
+
+let map = new Map();
+
+    for(let i = 0; i < indices.length ; i++){
+            map.set(indices[i],s[i]) ;
+    }
+
+    // console.log(map);
+    const sortedEntries = Array.from(map.entries()).sort(([a],[b]) => a - b);
+    console.log(sortedEntries);
+
+    const sortedMap = new Map(sortedEntries);
+
+    let res = "";
+    // console.log(res);
+
+// Iterate over the sorted Map
+sortedMap.forEach((value) => {
+   res += value + '';
+})
+console.log(res);
+
+*/
+    
+
+/*
+    const myMap = new Map();
+myMap.set('banana', 3);
+myMap.set('apple', 1);
+myMap.set('orange', 2);
+
+// Convert the Map into an array of key-value pairs and sort it based on keys
+const sortedEntries = Array.from(myMap.entries()).sort(([keyA], [keyB]) => keyA.localeCompare(keyB));
+
+// Reconstruct the sorted Map from the sorted array
+const sortedMap = new Map(sortedEntries);
+
+// Iterate over the sorted Map
+sortedMap.forEach((value, key) => {
+  console.log(`${key}: ${value}`);
+});
+*/
+
+/*
+var interpret = function(command) {
+  let res = '';
+  let charArray = command.split(" ");
+  console.log(charArray);
+
+  for (let i = 0; i < charArray.length; ) {
+      if (charArray[i] === "G") {
+          res += "G";
+          i++;
+      } else if (charArray[i] === "()") {
+          res += "o";
+          i += 2; // Skip the next 2 characters for "()"
+      } else if (charArray[i] === "(al)") {
+          res += "al";
+          i += 4; // Skip the next 4 characters for "(al)"
+      }
+  }
+
+  return res;
+};
+interpret();
+// Test cases
+console.log(interpret("(al)G(al)()()G")); // Should output "alGalooG"
+*/
+console.log("(al)G(al)()()G".split("()").join("o")); // [ '(al)G(al)', '', 'G' ]
