@@ -1,8 +1,6 @@
 //slice():
 // const s = "hello World";
 
-const { chownSync } = require("fs");
-
 // console.log(s.slice(2)); //llo World =>first 2 elemnt remove kr dega.
 
 // console.log(s.slice(2,8));// llo Wo  =>2 se 7 index tak print kr dega
@@ -131,7 +129,6 @@ sortedMap.forEach((value) => {
 console.log(res);
 
 */
-    
 
 /*
     const myMap = new Map();
@@ -176,4 +173,40 @@ interpret();
 // Test cases
 console.log(interpret("(al)G(al)()()G")); // Should output "alGalooG"
 */
-console.log("(al)G(al)()()G".split("()").join("o")); // [ '(al)G(al)', '', 'G' ]
+// console.log("(al)G(al)()()G".split("()").join("o")); // [ '(al)G(al)', '', 'G' ]
+
+/*
+const myArray = ["a", "b", "c"];
+myArray.foo = "bar"; // Adding an enumerable property
+console.log(myArray); // [ 'a', 'b', 'c', foo: 'bar' ]
+for (let index in myArray) {
+    console.log(index); // Outputs: "0", "1", "2", "foo"
+}
+
+*/
+
+arr = [1, 1, 3];
+const countMap = {};
+// let count = 1;
+for (let i = 0; i < arr.length; i++) {
+  if (countMap[arr[i]]) {
+    countMap[arr[i]]++;
+  } else {
+    countMap[arr[i]] = 1;
+  }
+}
+console.log(countMap);
+for (let key in countMap) {
+  if (countMap.hasOwnProperty(key) && countMap[key] === 1) {
+    console.log(key);
+  }
+}
+
+function roundUpToNearestMultipleOf5(number) {
+  return Math.ceil(number / 5) * 5;
+}
+
+// Test cases
+const input1 = 33;
+const output1 = roundUpToNearestMultipleOf5(input1);
+console.log(output1);
