@@ -185,22 +185,7 @@ for (let index in myArray) {
 
 */
 
-arr = [1, 1, 3];
-const countMap = {};
-// let count = 1;
-for (let i = 0; i < arr.length; i++) {
-  if (countMap[arr[i]]) {
-    countMap[arr[i]]++;
-  } else {
-    countMap[arr[i]] = 1;
-  }
-}
-console.log(countMap);
-for (let key in countMap) {
-  if (countMap.hasOwnProperty(key) && countMap[key] === 1) {
-    console.log(key);
-  }
-}
+/*
 
 function roundUpToNearestMultipleOf5(number) {
   return Math.ceil(number / 5) * 5;
@@ -210,3 +195,26 @@ function roundUpToNearestMultipleOf5(number) {
 const input1 = 33;
 const output1 = roundUpToNearestMultipleOf5(input1);
 console.log(output1);
+*/
+let x = 9;
+let arr = x.toString(2);
+// x.toString(10);
+// arr.split('').join(" ");
+for(let i = 0 ; arr.length < 32 ; i++){
+    arr = 0 + arr + "";
+}
+arr = arr.split("");
+
+
+for(let i = 0 ;   i < arr.length ; i++){
+    
+   if(arr[i] === '1'){
+    arr[i] = '0';
+   }
+   else{
+    arr[i] = '1';
+   }
+
+}
+
+let res = parseInt(arr.join(""),2).toString(10);
