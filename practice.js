@@ -196,6 +196,7 @@ const input1 = 33;
 const output1 = roundUpToNearestMultipleOf5(input1);
 console.log(output1);
 */
+/*
 let x = 9;
 let arr = x.toString(2);
 // x.toString(10);
@@ -218,3 +219,74 @@ for(let i = 0 ;   i < arr.length ; i++){
 }
 
 let res = parseInt(arr.join(""),2).toString(10);
+*/
+
+function SOS(count) {
+  let res = "";
+  for(i = 1 ; i <= count ; i++){
+    res += "SOS";
+  }
+  return res;
+
+  // return res;
+}
+
+//  let new_str = str.replace(str[0],'d');
+// console.log(SOS());
+
+/*
+function demo(str){
+ let count = 0;
+ str = str.split("");
+ console.log(str);
+ for(let i = 0 ; i < str.length ; i++){
+  if(!(str[i].includes("S") || str[i].includes("O"))){
+   count++;
+  }
+ }
+  return count;
+
+
+}
+*/
+function check(substr) {
+  let count = 0;
+  let res = "";
+  
+  if (substr === "SOS") {
+    return 0;
+  } else {
+    if (substr[0] !== "S") {
+      count++;
+      res = "S" + substr.substring(1);
+    }
+    if (substr[1] !== "O") {
+      count++;
+      res = res.substring(0, 1) + "O" + res.substring(2);
+    }
+    if (substr[2] !== "S") {
+      count++;
+      res = res.substring(0, 2) + "S";
+    }
+  }
+  
+  return count;
+}
+
+function demo(s) {
+  let substr = "";
+  let totalRes = 0;
+  let i = 0;
+  
+  while (i < s.length) {
+    substr = s.substring(i, i + 3);
+    totalRes += check(substr);
+    i = i + 3;
+  }
+  
+  return totalRes;
+}
+
+const str = "SOSPOSOOSABS";
+console.log(demo(str)); // Output: 13
+
