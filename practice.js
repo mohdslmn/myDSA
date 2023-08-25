@@ -248,7 +248,7 @@ function demo(str){
 
 
 }
-*/
+
 function check(substr) {
   let count = 0;
   let res = "";
@@ -290,3 +290,47 @@ function demo(s) {
 const str = "SOSPOSOOSABS";
 console.log(demo(str)); // Output: 13
 
+
+function swap(arr, i, j) {
+  const temp = arr[i];
+  arr[i] = arr[j];
+  arr[j] = temp;
+}
+
+function generatePermutations(arr, start, result) {
+  if (start === arr.length - 1) {
+      result.push([...arr]);
+      return;
+  }
+
+  for (let i = start; i < arr.length; i++) {
+      swap(arr, start, i);
+      generatePermutations(arr, start + 1, result);
+      swap(arr, start, i); // Backtrack
+  }
+}
+
+const arr = [2, 1, 3];
+const permutations = [];
+generatePermutations(arr, 0, permutations);
+
+console.log("Permutations:", permutations);
+*/
+
+
+const needle = "leeto";
+const d = "leetcode";
+
+function de(needle,d){
+for(let i = 0 ; i < d.length ; i++){
+  // if()
+  if(!(d.includes(needle))){
+    console.log(d[i]);
+    return -1;
+  }
+  // console.log('false');
+  return i;
+}
+
+}
+console.log(de(needle,d));
