@@ -18,8 +18,11 @@ var cyclicSort = function(arr){
         }
     }
 };
-const arr = [2,3,0,1];
-console.log(arr);
+const arr = [2,1,4,7,4,8,3,6,4,7];
+// console.log(arr);
 cyclicSort(arr);
-console.log(arr); // [0,1,2,3]
+console.log(arr);
+
+
+// console.log(res); // [0,1,2,3]
 
