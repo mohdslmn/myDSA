@@ -4,7 +4,7 @@ function pattern7(n){
         let pattern = '';
         let totalColsInRows = row > n ? (2*n) - row : row ; 
         for(let col = 1 ; col < totalColsInRows ; col++){
-            pattern += "*";
+            pattern += " *";
 
         }
         console.log(pattern);
