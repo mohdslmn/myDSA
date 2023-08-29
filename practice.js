@@ -221,6 +221,7 @@ for(let i = 0 ;   i < arr.length ; i++){
 let res = parseInt(arr.join(""),2).toString(10);
 */
 
+/*
 function SOS(count) {
   let res = "";
   for(i = 1 ; i <= count ; i++){
@@ -230,6 +231,7 @@ function SOS(count) {
 
   // return res;
 }
+*/
 
 //  let new_str = str.replace(str[0],'d');
 // console.log(SOS());
@@ -318,19 +320,14 @@ console.log("Permutations:", permutations);
 */
 
 
-const needle = "leeto";
-const d = "leetcode";
-
-function de(needle,d){
-for(let i = 0 ; i < d.length ; i++){
-  // if()
-  if(!(d.includes(needle))){
-    console.log(d[i]);
-    return -1;
-  }
-  // console.log('false');
-  return i;
+function print1To5(n){
+  
+  //base condition
+   if(n == 5){
+        console.log(n);
+       return;
+   }
+   console.log(n);
+   print1To5(n+1);
 }
-
-}
-console.log(de(needle,d));
+print1To5(1);
