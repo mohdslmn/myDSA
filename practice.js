@@ -319,15 +319,15 @@ generatePermutations(arr, 0, permutations);
 console.log("Permutations:", permutations);
 */
 
-
-function print1To5(n){
+function temp(accounts){
+  let sum = [];
+  let eachSum = 0;
+  for(let i = 0; i < accounts.length; i++){
+      for(let j = 0 ; j < accounts[i].length; j++){
+          sum.push(eachSum + accounts[i][j]);
+      }
+  }
   
-  //base condition
-   if(n == 5){
-        console.log(n);
-       return;
-   }
-   console.log(n);
-   print1To5(n+1);
 }
-print1To5(1);
+const arr = [[1,2,3] , [3,2,1]];
+console.log(temp(arr));
