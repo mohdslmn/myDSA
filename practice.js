@@ -331,3 +331,46 @@ function temp(accounts){
 }
 const arr = [[1,2,3] , [3,2,1]];
 console.log(temp(arr));
+
+
+function mergeSort(arr){
+  if(arr.length === 1){
+      return arr;
+  }
+  let mid = Math.floor(arr.length/2);
+
+  let left = mergeSort(arr.slice( arr , 0 , mid));
+  let right = mergSort(arr.slice( arr , mid , arr.length));
+
+  return merge(left , right);
+}
+function merge(first , second){
+  let res = new Array(first.length + second.length);
+
+  let i = 0;
+  let j = 0;
+  let k = 0;
+
+  while(i < first.length && j < second.length){
+      if(first[i] < second[j]){
+          res[k] = first[i];
+          i++;
+      }
+      else{
+          res[k] = second[j];
+          j++;
+      }
+      k++;
+  }
+  // it may be possible that one of the arrays is not complete 
+  while(i < first.length){
+      res[k] = first[i];
+      i++;
+      k++;
+  }
+  return res;
+}
+const arr = [5,4,3,2,1];
+
+arr = mergeSort(arr);
+console.log(Array.toString(arr));
