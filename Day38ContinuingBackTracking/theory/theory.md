@@ -33,23 +33,7 @@ const board = [
   [true, true, true],
 ];
 
-#### Including All Paths in Maze ####
 
-  0   1   2 
- +-----------+ 
-0|A |   |    |      
-1|  |   |    |      
-2|  |   |  D |      
- +-----------+
-
-*this is a maze and A can travel in all directions Left,Right,Down,Up
-if we make recursion call for Up and Left such as:
-  if(r > 0){
-    allPath(p + "U" , maze , r - 1, c) ;
-  }
-  if(c > 0){
-    allPath(p + "L" , maze , r , c - 1);
-  }
 
 
 
