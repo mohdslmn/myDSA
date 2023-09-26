@@ -319,6 +319,7 @@ generatePermutations(arr, 0, permutations);
 console.log("Permutations:", permutations);
 */
 
+/*
 function temp(accounts){
   let sum = [];
   let eachSum = 0;
@@ -374,3 +375,6 @@ const arr = [5,4,3,2,1];
 
 arr = mergeSort(arr);
 console.log(Array.toString(arr));
+
+*/
+
