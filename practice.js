@@ -378,3 +378,22 @@ console.log(Array.toString(arr));
 
 */
 
+let s1 = ["ae" , "bc"];
+let s2 = ["a" , "ebc"];
+
+// console.log(s1.concat(s2));
+
+let temp = s1.join('');
+
+let temp2 = s2.join("");
+
+ console.log(temp);
+ console.log(temp2 );
+
+   if(temp === temp2){
+    // console.log('true');
+   }
+   else{
+    // return false;
+    // console.log("false");
+   }
