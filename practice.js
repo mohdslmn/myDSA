@@ -378,22 +378,33 @@ console.log(Array.toString(arr));
 
 */
 
-let s1 = ["ae" , "bc"];
-let s2 = ["a" , "ebc"];
+// let s1 = ["ae" , "bc"];
+// let s2 = ["a" , "ebc"];
 
-// console.log(s1.concat(s2));
+// // console.log(s1.concat(s2));
 
-let temp = s1.join('');
+// let temp = s1.join('');
 
-let temp2 = s2.join("");
+// let temp2 = s2.join("");
 
- console.log(temp);
- console.log(temp2 );
+//  console.log(temp);
+//  console.log(temp2 );
 
-   if(temp === temp2){
-    // console.log('true');
-   }
-   else{
-    // return false;
-    // console.log("false");
-   }
+//    if(temp === temp2){
+//     // console.log('true');
+//    }
+//    else{
+//     // return false;
+//     // console.log("false");
+//    }
+
+const ds = [4,8,2,5,6,7,2];
+ds.pop(ds[2]);
+// console.log(ds);
+
+let arr = [1, 2, 3, 4, 5];
+let indexToDelete = 2; // Index of the element to delete
+
+arr.splice(indexToDelete, 1); // Removes 1 element at the specified index
+
+console.log(arr); // The array without the deleted element
