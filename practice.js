@@ -398,13 +398,15 @@ console.log(Array.toString(arr));
 //     // console.log("false");
 //    }
 
-const ds = [4,8,2,5,6,7,2];
-ds.pop(ds[2]);
-// console.log(ds);
+// const ds = [4,8,2,5,6,7,2];
+// ds.pop(ds[2]);
+// // console.log(ds);
 
-let arr = [1, 2, 3, 4, 5];
-let indexToDelete = 2; // Index of the element to delete
+// let arr = [1, 2, 3, 4, 5];
+// let indexToDelete = 2; // Index of the element to delete
 
-arr.splice(indexToDelete, 1); // Removes 1 element at the specified index
+// arr.splice(indexToDelete, 1); // Removes 1 element at the specified index
 
-console.log(arr); // The array without the deleted element
+// console.log(arr); // The array without the deleted element
+let temp = new Array(2*3);
+console.log(temp.length);
