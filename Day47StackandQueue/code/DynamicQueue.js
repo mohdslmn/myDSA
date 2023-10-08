@@ -42,5 +42,5 @@ dynamicQueue.insert(5);
 dynamicQueue.insert(6);
 dynamicQueue.insert(7);
 // dynamicQueue.remove();
-console.log(dynamicQueue.remove());
+// console.log(dynamicQueue.remove());
 dynamicQueue.printQueue1();
