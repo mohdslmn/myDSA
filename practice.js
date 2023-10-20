@@ -385,28 +385,36 @@ console.log(Array.toString(arr));
 
 // let temp = s1.join('');
 
-// let temp2 = s2.join("");
+function firstNegativeInWindow(arr, k) {
+  const result = [];
+  const negatives = [];
+  
+  for (let i = 0; i < k; i++) {
+      if (arr[i] < 0) {
+          negatives.push(arr[i]);
+      }
+  }
+  
+  for (let i = k; i <= arr.length; i++) {
+      if (negatives.length > 0) {
+          result.push(negatives[0]);
+          if (negatives[0] === arr[i - k]) {
+              negatives.shift();
+          }
+      } else {
+          result.push(0); // If there are no negative numbers in the window, add 0.
+      }
+      
+      if (i < arr.length && arr[i] < 0) {
+          negatives.push(arr[i]);
+      }
+  }
+  
+  return result;
+}
 
-//  console.log(temp);
-//  console.log(temp2 );
+const arr = [2, -1, -7, 8, 6, -3, -2];
+const k = 3;
+console.log(firstNegativeInWindow(arr, k));
 
-//    if(temp === temp2){
-//     // console.log('true');
-//    }
-//    else{
-//     // return false;
-//     // console.log("false");
-//    }
 
-// const ds = [4,8,2,5,6,7,2];
-// ds.pop(ds[2]);
-// // console.log(ds);
-
-// let arr = [1, 2, 3, 4, 5];
-// let indexToDelete = 2; // Index of the element to delete
-
-// arr.splice(indexToDelete, 1); // Removes 1 element at the specified index
-
-// console.log(arr); // The array without the deleted element
-let temp = new Array(2*3);
-console.log(temp.length);
